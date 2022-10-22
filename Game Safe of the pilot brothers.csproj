@@ -16,4 +16,8 @@
     <PackageReference Include="ReactiveUI.WPF" Version="18.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\OptimMethod\ServicesMVVM\ServicesMVVM.csproj" />
+  </ItemGroup>
+
 </Project>
