@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game Safe of the pilot brothers", "Game Safe of the pilot brothers.csproj", "{AE6C68A2-5C6F-400E-A0F3-2C2250C92802}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicesMVVM", "..\..\OptimMethod\ServicesMVVM\ServicesMVVM.csproj", "{5250C57F-F038-4266-8668-EE9CA7D8ADC2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{AE6C68A2-5C6F-400E-A0F3-2C2250C92802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE6C68A2-5C6F-400E-A0F3-2C2250C92802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE6C68A2-5C6F-400E-A0F3-2C2250C92802}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5250C57F-F038-4266-8668-EE9CA7D8ADC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5250C57F-F038-4266-8668-EE9CA7D8ADC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5250C57F-F038-4266-8668-EE9CA7D8ADC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5250C57F-F038-4266-8668-EE9CA7D8ADC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
