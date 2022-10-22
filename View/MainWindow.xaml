@@ -1,0 +1,53 @@
+﻿<Window x:Class="Game_Safe_of_the_pilot_brothers.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:dataGrid2D="http://gu.se/DataGrid2D"
+        mc:Ignorable="d" Background="Gray"
+        MinHeight="400" MinWidth="400" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <DockPanel Margin="10,10,10,10" Background="Gray">
+        <Label Content="The safe of the Pilot brothers" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="30" 
+               FontFamily="Algerian" FontWeight="Normal"/>
+        <StackPanel DockPanel.Dock="Left">
+            <DataGrid SelectionUnit="Cell"
+                      dataGrid2D:ItemsSource.RowsSource="{Binding PlayingField}" 
+                      dataGrid2D:Selected.Index="{Binding Indexes}"
+                      AutoGenerateColumns="True" MinWidth="200" MinHeight="200"
+                      VerticalAlignment="Top" HorizontalAlignment="Center" HeadersVisibility="None" IsReadOnly="True">
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="Width" Value="40"/>
+                        <Setter Property="FontFamily" Value="Algerian"/>
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="FontSize" Value="30" />
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Right" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="🔧🔧🔧safe size" FontFamily="Algerian" FontSize="20" Margin="0,0,5,0"></Label>
+                <wpfx:IntegerUpDown FontSize="20" FontFamily="Algerian" Maximum="10" Minimum="5" Width="120"
+                    Value="{Binding Path=PlayingFieldSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" CultureInfo="ru-RU"/>
+            </StackPanel>
+            <Button Content="generate a safe" FontFamily="Algerian" FontSize="20"
+            Command="{Binding StartNewGames}" Margin="0,0,0,10"></Button>
+            <Button Content="start over" FontFamily="Algerian" FontSize="20" Margin="0,0,0,10"
+            Command="{Binding StartGameAgain}"></Button>
+            <Button Content="show hint / hide hint" FontFamily="Algerian" FontSize="20"
+            Command="{Binding Help}"></Button>
+            <Label Content="{Binding ListHelp}" FontFamily="Algerian" FontSize="20" TextBlock.TextAlignment="Center"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
