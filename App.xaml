@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:Game_Safe_of_the_pilot_brothers"
              Startup="_Startup">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
-<!--StartupUri="MainWindow.xaml"-->
